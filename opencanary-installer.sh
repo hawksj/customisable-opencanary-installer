@@ -137,9 +137,6 @@ git clone https://github.com/thinkst/opencanary
 cd opencanary
 python3 setup.py sdist && python3 setup.py install
 
-# This file doesn't get moved automatically. 
-
-
 # Reset the hostname
 echo "$hs" > /etc/hostname
 cat >/etc/hosts <<EOL
@@ -264,6 +261,8 @@ EOL
 
 # Replace the default created opencanary conf file
 mv -f opencanary.conf /root/.opencanary.conf
+
+# This file doesn't get moved automatically. 
 cp bin/opencanary.tac /usr/local/bin/opencanary.tac
 
 echo "Config file written. To enable SMTP reporting, edit the SMTP Handler options in /root/.opencanary.conf, or delete the SMTP class to disable it."
