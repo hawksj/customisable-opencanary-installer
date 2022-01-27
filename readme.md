@@ -6,7 +6,7 @@
 - Setting the device's hostname
 - Updating the OS
 - ~~Configuring unattended upgrades for OS and application patches~~ (removed to avoid bugs caused by bad patches, please uncomment to enable)
-- Installing dependencies
+- Installing dependencies (including screen)
 - Installing and configuring the canary
 - Creating a systemd unit file to launch OpenCanary as a service
 
@@ -16,7 +16,7 @@
 
 ## Installation Instructions
 
-For more detailed installation instructions for Simon's OC installer, see [his website](https://smnbkly.co/blog/opencanary-free-flexible-distributed-honeypot).
+For more detailed installation instructions for Simon's OpenCanary installer that forms the basis for this project, see [his website](https://smnbkly.co/blog/opencanary-free-flexible-distributed-honeypot).
 
 1. Copy or download the 'opencanary-installer.sh' to your home directory
 2. Modify the permissions of the file to allow execution using `sudo chmod +x opencanary-installer.sh`
@@ -26,8 +26,9 @@ For more detailed installation instructions for Simon's OC installer, see [his w
 
 ## Troubleshooting
 1. Confirm the Canary service is running by entering `systemctl status opencanary`. You should see a returned value that includes `Active: active (running)`
-2. Ensure your configuration file at \~/opencanary.conf is valid
-3. Look for error messages at `/var/tmp/opencanary.log`
+2. Check OpenCanary screen is running with `sudo screen -r` 
+3. Ensure your configuration file at \~/opencanary.conf is valid
+4. Look for error messages at `/var/tmp/opencanary.log`
 
 ## Limitations
-Not all modules can currently be configured using this script, however I have tried to include the most common ones. Additional modules will currently need to be configured directly in the OpenCanary configuration file (found in home direction or under /root/.opencanary.conf
+Not all modules can currently be configured using this script, however I have tried to include the most common ones. Additional modules will currently need to be configured directly in the OpenCanary configuration file (found in home direction or under `/root/.opencanary.conf`
