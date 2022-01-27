@@ -5,7 +5,7 @@
 - Setting a static IP address if internet connection fails
 - Setting the device's hostname
 - Updating the OS
-- ~~Configuring unattended upgrades for OS and application patches~~
+- ~~Configuring unattended upgrades for OS and application patches~~ (removed to avoid bugs caused by bad patches, please uncomment to enable)
 - Installing dependencies
 - Installing and configuring the canary
 - Creating a systemd unit file to launch OpenCanary as a service
